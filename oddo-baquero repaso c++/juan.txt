@@ -1,5 +1,0 @@
-Contraseña: 1234
-Saldo: 0
-Dólares: 0
-Movimientos:
-Plazos Fijos:
