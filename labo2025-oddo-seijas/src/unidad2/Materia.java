@@ -1,3 +1,6 @@
+package unidad2;
+
+import java.util.ArrayList;
 import java.util.ArrayList;
 
 public class Materia {
@@ -5,14 +8,13 @@ public class Materia {
     private ArrayList<String> listaDeContenidos;
     private ArrayList<Alumno> alumnosInscriptos;
 
-    // Constructor
+
     public Materia(String nombre) {
         this.nombre = nombre;
         this.listaDeContenidos = new ArrayList<>();
         this.alumnosInscriptos = new ArrayList<>();
     }
 
-    // Getter y Setter para nombre
     public String getNombre() {
         return nombre;
     }
@@ -21,7 +23,6 @@ public class Materia {
         this.nombre = nombre;
     }
 
-    // Getter y Setter para listaDeContenidos
     public ArrayList<String> getListaDeContenidos() {
         return listaDeContenidos;
     }
@@ -30,7 +31,6 @@ public class Materia {
         this.listaDeContenidos = listaDeContenidos;
     }
 
-    // Getter y Setter para alumnosInscriptos
     public ArrayList<Alumno> getAlumnosInscriptos() {
         return alumnosInscriptos;
     }
@@ -39,12 +39,10 @@ public class Materia {
         this.alumnosInscriptos = alumnosInscriptos;
     }
 
-    // Método para agregar contenido a la materia
     public void agregarContenido(String contenido) {
         listaDeContenidos.add(contenido);
     }
 
-    // Método para inscribir un alumno
     public void inscribirAlumno(Alumno alumno) {
         alumnosInscriptos.add(alumno);
     }

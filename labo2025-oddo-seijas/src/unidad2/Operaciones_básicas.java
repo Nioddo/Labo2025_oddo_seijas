@@ -3,12 +3,13 @@ package unidad2;
 import java.util.ArrayList;
 
 public class Operaciones_básicas {
-    public static void main(String[] args) {
+    public void main(String[] args) {
         int suma = 0;
         ArrayList<Integer> numeros = new ArrayList<Integer>();
         for (Integer numero : numeros) {
             suma += numero;
         }
+
         System.out.println("la suma total es." + suma);
 
         ArrayList<String> palabras = new ArrayList<String>();

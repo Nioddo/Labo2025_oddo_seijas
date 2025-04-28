@@ -1,18 +1,19 @@
 package unidad2;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 
 public class Alumno {
     private String nombre;
     private String apellido;
-    private String fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private ArrayList<Double> listaDeNotas;
 
     public Alumno() {
         this.listaDeNotas = new ArrayList<>();
     }
 
-    public Alumno(String nombre, String apellido, String fechaNacimiento, ArrayList<Double> listaDeNotas) {
+    public Alumno(String nombre, String apellido, LocalDate fechaNacimiento, ArrayList<Double> listaDeNotas) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.fechaNacimiento = fechaNacimiento;
@@ -35,11 +36,11 @@ public class Alumno {
         this.apellido = apellido;
     }
 
-    public String getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -80,9 +81,13 @@ public class Alumno {
         }
         return mayor;
     }
+    public int promedioEdadAlumnos(){
 
+
+
+    }
     public static void main(String[] args) {
-                Alumno alumno = new Alumno("Juan", "Pérez", "2005, 5, 10", new ArrayList<>());
+                Alumno alumno = new Alumno("Juan", "Pérez", LocalDate.of(2007,11,3), new ArrayList<>());
 
                 System.out.println("Menor nota: " + alumno.menorNota()); // Debería imprimir -1
                 System.out.println("Mayor nota: " + alumno.mayorNota()); // Debería imprimir -1

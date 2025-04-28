@@ -1,51 +1,78 @@
 package unidad2;
-
-import unidad1.Cancion;
-
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 
 public class Alumno_con_materias {
-    private ArrayList<String> contenidos;
+    private ArrayList<Materia> materias;
     private ArrayList<Alumno> alumnos;
-    String nombre;
 
-    public Alumno_con_materias(){
+
+    public Alumno_con_materias() {
         ArrayList<Double> notas = new ArrayList<>();
         notas.add(10d);
-        contenidos.add(new String("Fracciones"));
-        alumnos.add(new Alumno("juan", "seijas","12/12/12",notas));
-        this.nombre = "matematica";
+        materias.add(new Materia("Fracciones"));
+        alumnos.add(new Alumno("juan", "seijas", "12/12/12", notas));
     }
-    public Alumno_con_materias(ArrayList<String> contenidos, ArrayList<Alumno> alumnos, String nombre){
-        this.contenidos = new ArrayList<String>();
+
+    public Alumno_con_materias(ArrayList<Materia> materias, ArrayList<Alumno> alumnos) {
+        this.materias = new ArrayList<Materia>();
         this.alumnos = new ArrayList<Alumno>();
-        this.nombre = nombre;
     }
 
-    public ArrayList<String> getContenidos() {
-        return contenidos;
-    }
-    public void setCanciones(ArrayList<String> contenidos) {
-        this.contenidos = contenidos;
+    public ArrayList<Materia> getMaterias() {
+        return materias;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setMaterias(ArrayList<Materia> materias) {
+        this.materias = materias;
     }
 
     public ArrayList<Alumno> getAlumnos() {
         return alumnos;
     }
+
     public void setAlumnos(ArrayList<Alumno> alumnos) {
         this.alumnos = alumnos;
     }
 
-    public static void agregarMateria(String nombre,  ){
+    public void agregarMateria(Materia m1) {
+        materias.add(m1);
+    }
+
+    public double promedioEdadAlumnos() {
+
+        int tamanio = alumnos.size();
+        double prom = 0;
+        int suma = 0;
+        for (Alumno alumno : alumnos) {
+            LocalDate fActual = LocalDate.now();
+            Period periodo = Period.between(alumno.getFechaNacimiento(), fActual);
+            int edad = fActual.getYear();
+            suma += edad;
+
+        }
+        prom = suma / tamanio;
+        return prom;
 
 
     }
 
-}
+    public double promedioNotasAlumno() {
+        double sumaNotas = 0;
+        int cantidadNotas = 0;
+
+        for (Alumno alumno : alumnos) {
+            for (Double nota : alumno.getListaDeNotas()) {
+                sumaNotas += nota;
+                cantidadNotas++;
+                
+            }
+        }
+
+        if (cantidadNotas == 0) {
+            return 0;
+        }
+
+        return sumaNotas / cantidadNotas;
+    }
