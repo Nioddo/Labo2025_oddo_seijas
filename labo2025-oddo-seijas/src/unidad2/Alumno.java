@@ -81,11 +81,7 @@ public class Alumno {
         }
         return mayor;
     }
-    public int promedioEdadAlumnos(){
 
-
-
-    }
     public static void main(String[] args) {
                 Alumno alumno = new Alumno("Juan", "Pérez", LocalDate.of(2007,11,3), new ArrayList<>());
 

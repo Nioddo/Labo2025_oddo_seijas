@@ -12,7 +12,7 @@ public class Alumno_con_materias {
         ArrayList<Double> notas = new ArrayList<>();
         notas.add(10d);
         materias.add(new Materia("Fracciones"));
-        alumnos.add(new Alumno("juan", "seijas", "12/12/12", notas));
+        alumnos.add(new Alumno("juan", "seijas", LocalDate.of(2007,11,3), notas));
     }
 
     public Alumno_con_materias(ArrayList<Materia> materias, ArrayList<Alumno> alumnos) {
@@ -66,7 +66,7 @@ public class Alumno_con_materias {
             for (Double nota : alumno.getListaDeNotas()) {
                 sumaNotas += nota;
                 cantidadNotas++;
-                
+
             }
         }
 
@@ -76,3 +76,4 @@ public class Alumno_con_materias {
 
         return sumaNotas / cantidadNotas;
     }
+}
