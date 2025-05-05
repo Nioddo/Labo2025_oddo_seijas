@@ -18,6 +18,7 @@ public class Campeonato {
         this.tardes = new ArrayList<>();
         this.noches = new ArrayList<>();
     }
+
     public void dividir() {
         for (Equipo equipo : equipos) {
             if (equipo.getDisponibilidad().equals("mañana")) {
