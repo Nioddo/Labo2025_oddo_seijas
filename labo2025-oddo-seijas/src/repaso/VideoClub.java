@@ -41,21 +41,18 @@ public VideoClub(){
     }
 
  public void mayorPelicula(ArrayList<Estanteria> estanterias){
-     float aux=0;
-     int nume=0;
-     String nombrep="";
+     Pelicula aux = new Pelicula();
+     Estanteria e = new Estanteria();
     for(Estanteria estanteria : estanterias ){
         for(Pelicula pelicula: estanteria.getPeliculas()){
-            if(pelicula.getDuracion()>aux){
-                aux=pelicula.getDuracion();
-                nume=estanteria.getNumero();
-                nombrep=pelicula.getNombre();
+            if(pelicula.getDuracion()>aux.getDuracion()){
+                aux=pelicula;
+                e=estanteria;
+
             }
         }
     }
-     System.out.println("Duracion:"+aux);
-     System.out.println("Numero estanteria:"+nume);
-     System.out.println("Nombre pelicula:"+nombrep);
+     System.out.println("Duracion:"+aux+" en la estanteria:"+ e.getNumero() + " nombre:"+aux.getNombre());
  }
 
 }

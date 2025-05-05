@@ -15,7 +15,7 @@ public class Pelicula {
     public Pelicula(){
         this.nombre = "Black mirror";
         this.genero = "sci-futurista";
-        this.duracion = 100;
+        this.duracion = 0;
         this.directors = new ArrayList<>();
         this.actors = new ArrayList<>();
 
@@ -74,7 +74,13 @@ public String getGenero(){
         this.actors = actors;
 
     }
-
+    public void actoresMayores(ArrayList<Persona> actors){
+        for(Persona persona : actors){
+            if (persona.getEdad() >= 18) {
+                System.out.println(persona.getNombre());
+            }
+        }
+    }
 
 
 

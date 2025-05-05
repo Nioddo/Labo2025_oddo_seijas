@@ -30,11 +30,5 @@ public class Estanteria {
         this.peliculas=peliculas;
     }
 
-    public void actoresMayores(){
-        for(){
-
-        }
-    }
-
 
 }
