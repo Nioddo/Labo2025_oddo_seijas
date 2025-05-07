@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class VideoClub {
     private String direccion;
+    private String comuna;
     private int codigoPostal;
     private ArrayList<Estanteria> estanterias;
 
@@ -11,16 +12,22 @@ public VideoClub(){
     this.direccion="Tamborini 3574";
     this.codigoPostal=1430;
     this.estanterias=new ArrayList<>();
+    this.comuna="comuna11";
 }
-    public VideoClub(String direccion, int codigoPostal, ArrayList<Estanteria> estanterias){
+    public VideoClub(String direccion, int codigoPostal, ArrayList<Estanteria> estanterias, String comuna){
         this.direccion=direccion;
         this.codigoPostal=codigoPostal;
         this.estanterias=estanterias;
+        this.comuna=comuna;
     }
 
     public String getDireccion(){
         return direccion;
     }
+    public String getComuna(){
+        return comuna;
+    }
+
     public int getCodigoPostal(){
         return codigoPostal;
     }
@@ -29,6 +36,10 @@ public VideoClub(){
     }
     public void setDireccion(String direccion){
         this.direccion = direccion;
+
+    }
+    public void setComuna(String comuna){
+        this.comuna = comuna;
 
     }
     public void setCodigoPostal(int codigoPostal){
