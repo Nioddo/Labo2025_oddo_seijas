@@ -1,6 +1,6 @@
 package unidad1;
 
-public class Rectángulo {
+public class Rectángulo extends Figuras{
     private float base;
     private float altura;
 

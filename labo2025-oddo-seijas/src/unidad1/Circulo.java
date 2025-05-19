@@ -1,6 +1,6 @@
 package unidad1;
 
-public class Circulo {
+public class Circulo extends Figuras {
     private float radio;
 
     public Circulo() {
