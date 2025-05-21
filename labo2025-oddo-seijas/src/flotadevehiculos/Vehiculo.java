@@ -1,13 +1,13 @@
-package unidad3herencia.flotadevehiculos;
+package flotadevehiculos;
 
-public class vehiculo {
+public class Vehiculo {
     private String marca;
     private String modelo;
     private String color;
     private int cantruedas;
     private int aniofabricacion;
 
-    public vehiculo(){
+    public Vehiculo(){
         this.marca="";
         this.modelo="";
         this.color="";
@@ -15,7 +15,7 @@ public class vehiculo {
         this.aniofabricacion=0;
     }
 
-    public vehiculo(String marca, String modelo, String color, int cantruedas, int aniofabricacion){
+    public Vehiculo(String marca, String modelo, String color, int cantruedas, int aniofabricacion){
         this.marca=marca;
         this.modelo=modelo;
         this.color=color;

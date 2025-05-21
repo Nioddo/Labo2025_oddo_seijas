@@ -1,18 +1,16 @@
-package unidad3herencia.flotadevehiculos;
+package flotadevehiculos;
 
-import unidad1.Coche;
-
-public class camioneta extends vehiculo {
+public class Camioneta extends Vehiculo {
     private String patente;
     private int capacidadkg;
 
-    public camioneta(String patente, int capacidadkg) {
+    public Camioneta(String patente, int capacidadkg) {
         super();
         this.patente = patente;
         this.capacidadkg = capacidadkg;
     }
 
-    public camioneta(String marca, String modelo, String color, int cantruedas, int aniofabricacion, String patente, int capacidadkg) {
+    public Camioneta(String marca, String modelo, String color, int cantruedas, int aniofabricacion, String patente, int capacidadkg) {
         super(marca, modelo, color, cantruedas, aniofabricacion);
         this.patente = patente;
         this.capacidadkg = capacidadkg;
