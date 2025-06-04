@@ -1,5 +1,6 @@
 package Compra_computadoras;
 
+import SistemaDeAlmuerzos.Persona;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,5 +1,7 @@
 package Compra_computadoras;
 
+import SistemaDeAlmuerzos.Persona;
+
 import java.util.ArrayList;
 
 public class Main {

@@ -47,4 +47,6 @@ public class Jugador {
     public void setCapitan(boolean capitan) {
         this.capitan = capitan;
     }
+
+
 }

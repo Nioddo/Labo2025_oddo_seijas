@@ -1,7 +1,7 @@
 package repaso;
 
 
-import unidad1.Persona;
+import SistemaDeAlmuerzos.Persona;
 
 import java.util.ArrayList;
 
@@ -19,11 +19,11 @@ public class Pelicula {
         this.directors = new ArrayList<>();
         this.actors = new ArrayList<>();
 
-        directors.add(new Persona("Charlie Brooker", 55, "bolivia 123"));
-        directors.add(new Persona("Jesse Armstrong", 43, "bolivia 123"));
+        directors.add(new Persona("Charlie"," Brooker",13));
+        directors.add(new Persona("Jesse ","Armstrong",11));
 
-        actors.add(new Persona("Jesse Plemons", 17, "samuel ortiz 466"));
-        actors.add(new Persona("Hayley Atwell", 22, "samuel ortiz 466"));
+        actors.add(new Persona("Jesse ","Plemons",44));
+        actors.add(new Persona("Hayley"," Atwell", 44));
     }
 
 public Pelicula(String nombre, String genero, float duracion, ArrayList<Persona> directors, ArrayList<Persona> actors){

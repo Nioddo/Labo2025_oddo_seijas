@@ -1,31 +1,43 @@
 package SistemaDeAlmuerzos;
 
 public class Persona {
-    private String nombre;
-    private String apellido;
+    private String Nombre;
+    private String Apellido;
+    private int Edad;
 
     public Persona() {
-        this.nombre = "nicolas";
-        this.apellido = "sanchez";
+        this.Nombre = "nicolas";
+        this.Apellido = "sanchez";
+        this.Edad = 17;
     }
-    public Persona(String nombre, String apellido) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+
+    public Persona(String nombre, String apellido, int edad) {
+        Nombre = nombre;
+        Apellido = apellido;
+        Edad = edad;
     }
 
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        Nombre = nombre;
     }
 
     public String getApellido() {
-        return apellido;
+        return Apellido;
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        Apellido = apellido;
+    }
+
+    public int getEdad() {
+        return Edad;
+    }
+
+    public void setEdad(int edad) {
+        Edad = edad;
     }
 }

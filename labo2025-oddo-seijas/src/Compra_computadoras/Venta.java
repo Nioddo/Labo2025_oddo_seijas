@@ -1,5 +1,7 @@
 package Compra_computadoras;
 
+import SistemaDeAlmuerzos.Persona;
+
 import java.time.LocalDateTime;
 
 public class Venta {

@@ -1,7 +1,5 @@
 package repaso;
 
-import unidad1.Persona;
-
 import java.util.ArrayList;
 
 public class Estanteria {

@@ -14,7 +14,7 @@ public void AgregarCompra(){
 }
 public double precioTotal(){
     double aux=0;
-    for (Componente c; todosPerifericos){
+    for (Componente c: todosPerifericos){
         aux=c.getPrecio()*c.getStock();
     }
     return aux;

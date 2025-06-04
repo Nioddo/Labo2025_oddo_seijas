@@ -4,7 +4,6 @@ import curling.Jugador;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class Equipo {
         private String nombreEquipo;
         private String barrio;
@@ -20,7 +19,7 @@ public class Equipo {
 
         public boolean numeroCamisetaRepetido(int numero) {
             for (Jugador jugador : jugadores) {
-                if (jugador.getNumeroCamiseta() == numero) {
+                if (jugador.getNumero() == numero) {
                     return true;
                 }
             }
@@ -50,10 +49,10 @@ public class Equipo {
             System.out.println("Jugadores:");
             for (Jugador jugador : jugadores) {
                 System.out.print("- " + jugador.getNombre());
-                if (jugador.esCapitan()) {
+                if (jugador.isCapitan()) {
                     System.out.print(" (Capitán)");
                 }
-                System.out.println(", Fecha de nacimiento: " + jugador.getFechaNacimiento() + ", Camiseta N°: " + jugador.getNumeroCamiseta());
+                System.out.println(", Fecha de nacimiento: " + jugador.getFecha() + ", Camiseta N°: " + jugador.getNumero());
             }
         }
     }
