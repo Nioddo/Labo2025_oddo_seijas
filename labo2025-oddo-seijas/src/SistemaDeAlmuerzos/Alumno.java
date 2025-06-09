@@ -8,8 +8,8 @@ public class Alumno extends Persona {
         this.division="A-1";
     }
 
-    public Alumno(String division, String nombre, String apellido) {
-        super(nombre, apellido);
+    public Alumno(String division, String nombre, String apellido, int edad) {
+        super(nombre, apellido, edad);
         this.division = division;
     }
 

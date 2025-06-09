@@ -7,14 +7,13 @@ import java.util.ArrayList;
 
 public class Pelicula {
     private String nombre;
-    private String genero;
+    private Genero genero;
     private float duracion;
     private ArrayList<Persona> directors;
     private ArrayList<Persona> actors;
 
     public Pelicula(){
         this.nombre = "Black mirror";
-        this.genero = "sci-futurista";
         this.duracion = 0;
         this.directors = new ArrayList<>();
         this.actors = new ArrayList<>();
@@ -28,7 +27,6 @@ public class Pelicula {
 
 public Pelicula(String nombre, String genero, float duracion, ArrayList<Persona> directors, ArrayList<Persona> actors){
 this.nombre = nombre;
-this.genero= genero;
 this.duracion =duracion;
 this.directors=directors;
 this.actors=actors;
@@ -42,13 +40,6 @@ public void setNombre(String nombre){
 
 }
 
-public String getGenero(){
-    return genero;
-    }
-    public void setGenero(String genero){
-        this.genero = genero;
-
-    }
 
 
     public float getDuracion(){

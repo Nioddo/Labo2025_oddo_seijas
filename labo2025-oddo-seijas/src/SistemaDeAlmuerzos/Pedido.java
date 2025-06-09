@@ -8,14 +8,13 @@ public class Pedido {
     private Plato plato;
     private Persona solicitante;
     private LocalTime HoraEntrega;
-    private String Estado;
+    private Estado Estado;
 
     public Pedido(LocalDate fechaCreacion, Plato plato, Persona solicitante, LocalTime horaEntrega, String estado) {
         this.FechaCreacion = fechaCreacion;
         this.plato = plato;
         this.solicitante = solicitante;
         this.HoraEntrega = horaEntrega;
-        this.Estado = estado;
     }
 
     public LocalDate getFechaCreacion() {
@@ -50,11 +49,5 @@ public class Pedido {
         HoraEntrega = horaEntrega;
     }
 
-    public String getEstado() {
-        return Estado;
-    }
 
-    public void setEstado(String estado) {
-        Estado = estado;
-    }
 }
