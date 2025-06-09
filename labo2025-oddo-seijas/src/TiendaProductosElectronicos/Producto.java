@@ -1,11 +1,11 @@
 package TiendaProductosElectronicos;
 
-public class Producto {
+public abstract class Producto {
     private String nombre;
     private double precio;
     private int stock;
 
-    public Producto(String nombre, double precio, int stock) {
+    public Producto(String nombre, double precio, int stock ) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
@@ -34,4 +34,5 @@ public class Producto {
     public void setStock(int stock) {
         this.stock = stock;
     }
+
 }
