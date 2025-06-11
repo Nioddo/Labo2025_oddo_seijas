@@ -1,11 +1,10 @@
 package SistemaDeAlmuerzos;
 
 public class Profesor extends Persona {
-    private double descuentoPorcentaje;
+    private  static double descuentoPorcentaje=5.0;
 
     public Profesor() {
         super();
-        this.descuentoPorcentaje = 5.0;
     }
 
     public Profesor(double descuentoPorcentaje, String nombre, String apellido, int edad) {

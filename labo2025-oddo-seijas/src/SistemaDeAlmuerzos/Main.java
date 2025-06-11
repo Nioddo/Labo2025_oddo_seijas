@@ -8,8 +8,8 @@ public class Main {
         Sistem s1 = new Sistem();
         Plato p1 = new Plato("Milanesa con puré", 1.0,1);
 
-        Alumno alumno = new Alumno("3ero compu", "Matias", "Ritter");
-        Profesor profe = new Profesor(30, "Aylen", "Yamal");
+        Alumno alumno = new Alumno("3ero compu", "Matias", "Ritter",56);
+        Profesor profe = new Profesor(30, "Aylen", "Yamal",17);
 
         Pedido pp1 = new Pedido(LocalDate.of(2025,6,4), p1, alumno, LocalTime.of(10,05,11), "PENDIENTE");
 

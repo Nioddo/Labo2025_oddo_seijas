@@ -1,8 +1,8 @@
 package unidad1;
 
 public class Circulo extends Figuras {
-    private float radio;
-
+    private static float radio;
+    private static double pi=Math.PI;
     public Circulo() {
         this.radio = 2;
     }
@@ -19,11 +19,11 @@ public class Circulo extends Figuras {
         this.radio = radio;
     }
     public double area(float radio){
-    double area = Math.PI * Math.pow(radio, 2);
+    double area = pi * Math.pow(radio, 2);
     return area;
     }
     public double parimetro(float radio){
-        double perimetro = 2*Math.PI*radio;
+        double perimetro = 2*pi*radio;
         return perimetro;
     }
     public static void main(String[] args) {

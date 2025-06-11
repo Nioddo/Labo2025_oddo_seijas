@@ -9,8 +9,8 @@ public class Pelicula {
     private String nombre;
     private Genero genero;
     private float duracion;
-    private ArrayList<Persona> directors;
-    private ArrayList<Persona> actors;
+    private ArrayList<Directors> directors;
+    private ArrayList<Actors> actors;
 
     public Pelicula(){
         this.nombre = "Black mirror";
@@ -18,14 +18,14 @@ public class Pelicula {
         this.directors = new ArrayList<>();
         this.actors = new ArrayList<>();
 
-        directors.add(new Persona("Charlie"," Brooker",13));
-        directors.add(new Persona("Jesse ","Armstrong",11));
+        directors.add(new Directors("Charlie"," Brooker",13));
+        directors.add(new Directors("Jesse ","Armstrong",11));
 
-        actors.add(new Persona("Jesse ","Plemons",44));
-        actors.add(new Persona("Hayley"," Atwell", 44));
+        actors.add(new Actors("Jesse ","Plemons",44));
+        actors.add(new Actors("Hayley"," Atwell", 44));
     }
 
-public Pelicula(String nombre, String genero, float duracion, ArrayList<Persona> directors, ArrayList<Persona> actors){
+public Pelicula(String nombre, String genero, float duracion, ArrayList<Directors> directors, ArrayList<Actors> actors){
 this.nombre = nombre;
 this.duracion =duracion;
 this.directors=directors;
@@ -50,18 +50,18 @@ public void setNombre(String nombre){
 
     }
 
-    public ArrayList<Persona> getDirectors(){
+    public ArrayList<Directors> getDirectors(){
     return directors;
     }
-    public void setDirectors(ArrayList<Persona> directors){
+    public void setDirectors(ArrayList<Directors> directors){
         this.directors = directors;
 
     }
 
-    public ArrayList<Persona> getActors(){
+    public ArrayList<Actors> getActors(){
     return actors;
     }
-    public void setActors(ArrayList<Persona> actors){
+    public void setActors(ArrayList<Actors> actors){
         this.actors = actors;
 
     }

@@ -7,16 +7,16 @@ public class Equipo {
     private String nombre;
     private String barrio;
     private ArrayList<Jugador> jugadores;
-    private String disponibilidad;
+    private Turno disponibilidad;
 
     public Equipo() {
         this.nombre = "River";
         this.barrio = "Nuñez";
-        this.disponibilidad = "mañana";
+
         this.jugadores = new ArrayList<>();
     }
 
-    public Equipo(String nombre, String barrioProcedencia, String disponibilidadHoraria) {
+    public Equipo(String nombre, String barrioProcedencia, Turno disponibilidadHoraria) {
         this.nombre = nombre;
         this.barrio = barrioProcedencia;
         this.disponibilidad = disponibilidadHoraria;
@@ -47,11 +47,11 @@ public class Equipo {
         this.jugadores = jugadores;
     }
 
-    public String getDisponibilidad() {
+    public Turno getDisponibilidad() {
         return disponibilidad;
     }
 
-    public void setDisponibilidad(String disponibilidad) {
+    public void setDisponibilidad(Turno disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
 

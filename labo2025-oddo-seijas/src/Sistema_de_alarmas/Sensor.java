@@ -1,6 +1,6 @@
 package Sistema_de_alarmas;
 
-public class Sensor {
+public abstract class Sensor {
     private boolean estado;
     private double medida;
     private double umbral;

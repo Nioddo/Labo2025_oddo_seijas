@@ -3,7 +3,7 @@ package SistemaDeAlmuerzos;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Pedido {
+public  class Pedido {
     private LocalDate FechaCreacion;
     private Plato plato;
     private Persona solicitante;

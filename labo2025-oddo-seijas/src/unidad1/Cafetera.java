@@ -3,13 +3,9 @@ package unidad1;
 import java.util.Scanner;
 
 public class Cafetera {
-    private float cantidadMaxima;
-    private float cantidadActual;
+    private static float cantidadMaxima=1000;
+    private static float cantidadActual=0;
 
-    public Cafetera() {
-        this.cantidadMaxima = 1000;
-        this.cantidadActual = 0;
-    }
 
     public Cafetera(float cantidadMaxima) {
         this.cantidadMaxima = cantidadMaxima;

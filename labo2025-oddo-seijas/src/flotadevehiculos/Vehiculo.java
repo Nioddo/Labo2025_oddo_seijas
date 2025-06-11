@@ -2,7 +2,7 @@ package flotadevehiculos;
 
 import enums.Color;
 
-public class Vehiculo {
+public abstract class Vehiculo {
     private String marca;
     private String modelo;
     private Color color;
