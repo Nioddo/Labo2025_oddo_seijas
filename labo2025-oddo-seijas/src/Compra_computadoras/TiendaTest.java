@@ -35,7 +35,6 @@ public class TiendaTest {
         tarjeta = new Tarjeta(123456, "Titular", 999);
         efectivo = new Efectivo();
 
-        persona = new Persona("Ana", "López", 12345678);
         venta = new Venta(persona, computadora, tarjeta);
 
         sistema = new Sistema();

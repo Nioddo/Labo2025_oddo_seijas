@@ -95,5 +95,6 @@ public abstract class Dron {
         }
     }
 
-     abstract boolean evMision(Latitud,);
+
+    abstract boolean evMision(double Latitud, double Longitud);
 }

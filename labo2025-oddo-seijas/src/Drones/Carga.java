@@ -18,17 +18,13 @@ public class Carga extends Dron{
         this.carga = carga;
     }
 
+
     @Override
     boolean evMision(double Latitud, double Longitud){
-        if(CalcDistancia.calculo(Latitud,Longitud,Dron.getLatitudOrigen(),Dron.getLongitudOrigen())==30.0){
-            if(getBateria()>50){
+            if(getBateria()>50 && CalcDistancia.calculo(Latitud,Longitud,Dron.getLatitudOrigen(),Dron.getLongitudOrigen())==30.0){
                 return true;
             }
-            else {
-                return false;
-            }
-    }
-        else{
+            else{
             return false;
         }
 }

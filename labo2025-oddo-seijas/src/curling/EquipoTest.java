@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class EquipoTest {
     @Test
     public void Agregar() {
-        Equipo equipo = new Equipo("Los Leones", "Belgrano", "noche");
+        Equipo equipo = new Equipo("Los Leones", "Belgrano", Turno.NOCHE);
 
         for (int i = 1; i <= 11; i++) {
             Jugador j = new Jugador("Lucía", new Fecha(30, 9, 2009), 10, false);
