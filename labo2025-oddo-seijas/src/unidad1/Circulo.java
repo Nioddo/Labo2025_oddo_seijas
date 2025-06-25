@@ -1,7 +1,7 @@
 package unidad1;
 
 public class Circulo extends Figuras {
-    private static float radio;
+    private  float radio;
     private static double pi=Math.PI;
     public Circulo() {
         this.radio = 2;
