@@ -4,11 +4,13 @@ public abstract class Mascota {
     private String nombre;
     private String tipo;
     private Dueño dueño;
+    private int alegria;
 
-    public Mascota(String nombre, String tipo, Dueño dueño) {
+    public Mascota(String nombre, String tipo, Dueño dueño, int alegria) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.dueño = dueño;
+        this.alegria = alegria;
     }
 
     public String getNombre() {
@@ -33,5 +35,18 @@ public abstract class Mascota {
 
     public void setDueño(Dueño dueño) {
         this.dueño = dueño;
+    }
+
+    public int getAlegria() {
+        return alegria;
+    }
+
+    public void setAlegria(int alegria) {
+        this.alegria = alegria;
+    }
+    public abstract void saludar(Dueño d, Mascota m);
+
+    public void alimentar(){
+        alegria=+1;
     }
 }
