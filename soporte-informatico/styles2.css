@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.backg-gray{
+    background-color: rgb(61, 61, 61);
+}
+.titleheadername{
+    display: flex;
+    text-align: center;
+    margin-right: 10px;
+}
+.filacard{
+    display: flex;
+}
+
+main {
+    background-image: url(/imgs/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.font-color{
+    color: rgb(255, 251, 0) !important;
+    font-family:Bebas Neue !important;
+}
+.form-cont{
+    width: 100%;
+    margin: 0 auto;
+    padding: 5% 20%;
+}
+.footer-grande {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-size: 1.3rem; /* tamaño de texto general */
+}
+
+.footer-grande .icono-grande {
+    font-size: 2rem; /* tamaño de íconos */
+}
+
+.footer-grande .texto-footer {
+    font-size: 1.4rem; /* tamaño de texto específico si querés aún más grande */
+
+}
+/* From Uiverse.io by d_8965 */ 
+/* === removing default button style ===*/
+.button2 {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* button styling */
+  .button2 {
+    --border-right: 3px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #37f2ff;
+    --fs-size: 1em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button2:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color));
+  }
+  

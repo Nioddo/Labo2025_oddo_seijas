@@ -1,9 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Michroma&display=swap');
 .backg-gray{
-    background-color: rgb(61, 61, 61);
+    background-color: rgb(87, 87, 87) !important;
 }
-.titleheadername{
-    display: flex;
-    text-align: center;
-    margin-right: 10px;
+.font-color{
+    color: rgb(255, 251, 0) !important;
+    font-family:Michroma !important;
+}
+.font-color2{
+    color: rgb(0, 238, 255) !important;
+    font-family:Michroma !important;
 }
 
+
+.navbar {
+    background-color: #0d0d0d;
+    border-bottom: 3px solid #ffc107;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar-brand img {
+    border-radius: 50%;
+    border: 2px solid #ffc107;
+  }
+  
+  .titulo-foro {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffc107 !important;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    user-select: none;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  /* Botón "Añade una nave" con estilo personalizado */
+  .btn-navbar {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff80;
+    background: transparent;
+    cursor: pointer;
+    box-shadow: transparent;
+    border: 1px solid #ffffff80;
+    transition: 0.5s ease;
+    user-select: none;
+    text-shadow: none;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  .btn-navbar:hover,
+  .btn-navbar:focus {
+    color: #ffffff;
+    background: #008cff;
+    border: 1px solid #008cff;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+      0 0 100px #008cff;
+    outline: none;
+  }
+  
+  /* Búsqueda */
+  .form-control::placeholder {
+    color: #ccc;
+  }
+  
+  .form-control:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 5px #ffc107;
+  }
+  
+  /* Botón hamburguesa personalizado */
+  .navbar-toggler {
+    border-color: #ffc107;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='gold' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  
+
+
+
+
+
+.filacard{
+    display: flex;
+}
+
+main {
+    background-image: url(/imgs/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+.card-img-top {
+    height: 200px; /* altura fija */
+    object-fit: cover; /* recorta la imagen sin deformarla */
+}
+.card {
+    height: 100%;
+}
+.card-body{
+    background-color: #000000	;
+}
+.footer-grande {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-size: 1.3rem; /* tamaño de texto general */
+}
+
+.footer-grande .icono-grande {
+    font-size: 2rem; /* tamaño de íconos */
+}
+
+.footer-grande .texto-footer {
+    font-size: 1.4rem; /* tamaño de texto específico si querés aún más grande */
+
+}
