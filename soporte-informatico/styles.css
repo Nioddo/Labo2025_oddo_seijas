@@ -140,7 +140,7 @@
 }
 
 main {
-    background-image: url(/imgs/fondo.jpg);
+    background-image: url(../soporte-informatico/imgs/fondo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
