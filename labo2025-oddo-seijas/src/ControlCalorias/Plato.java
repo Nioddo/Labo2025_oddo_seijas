@@ -1,16 +1,15 @@
 package ControlCalorias;
 
 import java.util.HashSet;
+import java.util.Map;
 
 public class Plato {
     private String nombre;
-    private HashSet<String> ingredientes;
-    private int calorias;
+    private HashSet<Ingrediente> ingredientes;
 
-    public Plato(String nombre, HashSet<String> ingredientes, int calorias) {
+    public Plato(String nombre, HashSet<Ingrediente> ingredientes) {
         this.nombre = nombre;
         this.ingredientes = ingredientes;
-        this.calorias = calorias;
     }
 
     public String getNombre() {
@@ -21,21 +20,19 @@ public class Plato {
         this.nombre = nombre;
     }
 
-    public HashSet<String> getIngredientes() {
+    public HashSet<Ingrediente> getIngredientes() {
         return ingredientes;
     }
 
-    public void setIngredientes(HashSet<String> ingredientes) {
+    public void setIngredientes(HashSet<Ingrediente> ingredientes) {
         this.ingredientes = ingredientes;
     }
 
-    public int getCalorias() {
-        return calorias;
+    public double cantCalorias(){
+        int s=0;
+        for(Ingrediente cal : ingredientes){
+            s+=cal.getCalorias();
+        }
+        return s;
     }
-
-    public void setCalorias(int calorias) {
-        this.calorias = calorias;
-    }
-
-
 }

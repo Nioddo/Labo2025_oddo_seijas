@@ -29,7 +29,7 @@ public class PersonaFamilia extends PersonaUseAbs {
         for (Map.Entry<Plato, Integer> cal : consumidos.entrySet()) {
             Plato p=cal.getKey();
             Integer can=cal.getValue();
-            cdt+=p.getCalorias()*can;
+            cdt+=p.cantCalorias()*can;
         }
         return cdt;
     }
