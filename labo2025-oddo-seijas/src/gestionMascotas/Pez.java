@@ -8,6 +8,11 @@ public class Pez extends Mascota {
         super(nombre, tipo, dueño, alegria);
     }
 
+    @Override
+    public void saludar(Dueño d, Mascota m) {
+
+    }
+
     public static int getVidas() {
         return vidas;
     }
@@ -16,8 +21,4 @@ public class Pez extends Mascota {
         Pez.vidas = vidas;
     }
 
-    @Override
-    public void saludar(){
-
-    }
 }

@@ -45,7 +45,7 @@ public class sistema_vacunacion {
 
     public void vacunasMinimas (int vac) {
 
-        for (Ciudadano c : ciudadanos){
+        for (Ciudadano c : historialVacunas.keySet()){
             if (c.getHistorialVacunas().size()<vac){
                 System.out.println(c.getNombre()+c.getApellido());
             }
@@ -55,7 +55,7 @@ public class sistema_vacunacion {
 
 public void vacunasDadas (Vacuna vacunita){
         HashSet<Ciudadano>ciudadanosConVacunita=new HashSet<Ciudadano>();
-        for (Ciudadano c: ciudadanos){
+        for (Ciudadano c: historialVacunas.keySet()){
             if (c.getHistorialVacunas().contains(vacunita)){
                 ciudadanosConVacunita.add(c);
             }
