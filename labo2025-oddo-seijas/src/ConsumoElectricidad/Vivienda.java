@@ -9,9 +9,9 @@ public abstract class Vivienda {
     private String direccion;
     private int postal;
     private Dueño duenio;
-    private HashMap<Integer,HashMap<Meses,Integer>> KWhpAño;
+    private HashMap<Integer,HashMap<Meses,Double>> KWhpAño;
 
-    public Vivienda(String direccion, int postal, Dueño duenio, HashMap<Integer, HashMap<Meses, Integer>> KWhpAño) {
+    public Vivienda(String direccion, int postal, Dueño duenio, HashMap<Integer, HashMap<Meses, Double>> KWhpAño) {
         this.direccion = direccion;
         this.postal = postal;
         this.duenio = duenio;
@@ -42,14 +42,39 @@ public abstract class Vivienda {
         this.duenio = duenio;
     }
 
-    public HashMap<Integer, HashMap<Meses, Integer>> getKWhpAño() {
+    public HashMap<Integer, HashMap<Meses, Double>> getKWhpAño() {
         return KWhpAño;
     }
 
-    public void setKWhpaño(HashMap<Integer, HashMap<Meses, Integer>> KWhpAño) {
+    public void setKWhpaño(HashMap<Integer, HashMap<Meses, Double>> KWhpAño) {
         this.KWhpAño = KWhpAño;
     }
 
-    abstract void agregarConsumo ();
+    abstract int dameVlor();
 
+    void agregarConsumo (Meses mes,int año,Double kw){
+        if(!getKWhpAño().containsKey(año)) {
+            System.out.println("año no registrado");
+        }
+        else{
+            HashMap<Meses, Double> KWhpMes = getKWhpAño().get(año);
+            if (!KWhpMes.containsKey(mes)){
+
+                HashMap<Meses, Double> KWhpMesant = getKWhpAño().get(año-1);
+                Double mesanterior=KWhpMesant.get(mes);
+                if(kw <= mesanterior*0.9){
+                    double consumo =(kw*dameVlor())*0.95;
+                    KWhpMes.put(mes,consumo);
+                }
+                else{
+                    KWhpMes.put(mes,kw*dameVlor());
+                }
+
+            }
+            else{
+                System.out.println("el mes ya esta registrado");
+            }
+        }
+    }
 }
+

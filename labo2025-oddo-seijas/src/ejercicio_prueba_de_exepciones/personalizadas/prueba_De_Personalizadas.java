@@ -1,4 +1,4 @@
-package ejercicio_prueba_de_exepciones;
+package ejercicio_prueba_de_exepciones.personalizadas;
 
 public class prueba_De_Personalizadas {
 
@@ -27,14 +27,5 @@ public class prueba_De_Personalizadas {
     }
 }
 
-class NombreNullException extends Exception {
-    public NombreNullException(String mensaje) {
-        super(mensaje);
-    }
-}
 
-class NombreCortoException extends Exception {
-    public NombreCortoException(String mensaje) {
-        super(mensaje);
-    }
-}
+

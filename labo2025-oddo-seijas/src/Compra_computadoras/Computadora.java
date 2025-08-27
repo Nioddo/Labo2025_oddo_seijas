@@ -80,4 +80,8 @@ public class Computadora {
         }
         return contador;
     }
+
+    public int cantidadDispositivos(String entrada) {
+        return 0;
+    }
 }

@@ -5,9 +5,7 @@ public class SensorTemperatura extends Sensor{
         super(estado, medida, umbral, anioAdquisacion);
     }
 
-    public SensorTemperatura(double medida, boolean estado, int umbral, int anioAdquisacion) {
-        super();
-    }
+
 
     public void alerta(){
         if (CompUmbral()==true){
