@@ -1,74 +1,122 @@
 package Poblacion_sistema;
 
-import Poblacion_sistema.Continente;
+import com.sun.nio.sctp.SctpStandardSocketOptions;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
-class Mundo {
-    private HashMap<String, Lugar> lugares = new HashMap<>();
-    private HashSet<Continente> continentes = new HashSet<>();
+public class Mundo extends Lugar {
+    HashSet<Continente> continentes;
 
-
-    public void altaLugar(Lugar lugar) {
-        lugares.put(lugar.getCodigo(), lugar);
-        if (lugar instanceof Continente) {
-            continentes.add((Continente) lugar);
-        }
+    public Mundo(String nombre, int codigo, HashSet<Coordenada> cordenadas) {
+        super(nombre, codigo, cordenadas);
     }
 
-    public void bajaLugar(String codigo) {
-        Lugar l = lugares.remove(codigo);
-        if (l instanceof Continente) {
-            continentes.remove(l);
-        }
+    public HashSet<Continente> getContinentes() {
+        return continentes;
     }
 
-    public Lugar buscarLugar(String codigo) {
-        return lugares.get(codigo);
+    public void setContinentes(HashSet<Continente> continentes) {
+        this.continentes = continentes;
     }
 
-    public Pais paisConMasPoblacion() {
-        Pais max = null;
-        for (Lugar l : lugares.values()) {
-            if (l instanceof Pais) {
-                if (max == null || l.getPoblacion() > max.getPoblacion()) {
-                    max = (Pais) l;
+    public Pais pmaspoblado() {
+        Pais paisMasPoblado = null;
+        int poblacionMaxima = -1;
+        for (Continente c : continentes) {
+            for (Pais p : c.getPaises()) {
+                int poblacionActual = p.calcPoblacion();
+                if (poblacionActual > poblacionMaxima) {
+                    poblacionMaxima = poblacionActual;
+                    paisMasPoblado = p;
                 }
             }
         }
-        return max;
+        return paisMasPoblado;
     }
 
-    public Pais paisConMenosPoblacion() {
-        Pais min = null;
-        for (Lugar l : lugares.values()) {
-            if (l instanceof Pais) {
-                if (min == null || l.getPoblacion() < min.getPoblacion()) {
-                    min = (Pais) l;
+    public Pais pmenospoblado() {
+        Pais paisMasPoblado = null;
+        int poblacionMaxima = Integer.MAX_VALUE;
+        for (Continente c : continentes) {
+            for (Pais p : c.getPaises()) {
+                int poblacionActual = p.calcPoblacion();
+                if (poblacionActual < poblacionMaxima) {
+                    poblacionMaxima = poblacionActual;
+                    paisMasPoblado = p;
                 }
             }
         }
-        return min;
+        return paisMasPoblado;
     }
 
-    public Continente continenteConMasPoblacion() {
-        Continente max = null;
+    public Continente conmaspoblado() {
+        Continente cmas = null;
+        int pmax = -1;
         for (Continente c : continentes) {
-            if (max == null || c.getPoblacion() > max.getPoblacion()) {
-                max = c;
+            if (c.calcPoblacion() > pmax) {
+                pmax = c.calcPoblacion();
+                cmas = c;
             }
         }
-        return max;
+        return cmas;
     }
 
-    public Continente continenteConMenosPoblacion() {
-        Continente min = null;
+    public Continente conmenospoblado() {
+        Continente cmas = null;
+        int pmax = Integer.MAX_VALUE;
         for (Continente c : continentes) {
-            if (min == null || c.getPoblacion() < min.getPoblacion()) {
-                min = c;
+            if (c.calcPoblacion() < pmax) {
+                pmax = c.calcPoblacion();
+                cmas = c;
             }
         }
-        return min;
+        return cmas;
+    }
+
+
+    @Override
+    public void agregar(Lugar lnew) {
+        if (lnew instanceof Continente) {
+            continentes.add((Continente) lnew);
+        } else {
+            System.out.println("Error: A un País solo se le pueden agregar continentes.");
+        }
+    }
+
+    @Override
+    public void borrar(Lugar lnew) {
+        if (lnew instanceof Continente) {
+            continentes.remove((Continente) lnew);
+        } else {
+            System.out.println("Error: De un País solo se pueden borrar continentes.");
+        }
+    }
+
+    @Override
+    public void modificar(Lugar lnew, Lugar lold) {
+        if (lnew instanceof Continente && lold instanceof Continente) {
+            continentes.remove((Continente) lold);
+            continentes.add((Continente) lnew);
+        } else {
+            System.out.println("Error: En un País solo se pueden modificar continentes.");
+        }
+    }
+
+    @Override
+    public int calcPoblacion() {
+        int total = 0;
+        for (Continente p : continentes) {
+            total += p.calcPoblacion(); // Suma acumulativa
+        }
+        return total;
+    }
+
+
+    public static void main(String[] args) {
+        Coordenada cord1= new Coordenada(12.0,19.0);
+        HashSet<Coordenada> cordenadas1 = new HashSet<>();
+        cordenadas1.add(cord1);
+        Barrio b= new Barrio("3f",1,cordenadas1,1000);
+        System.out.println(b.calcPoblacion());
     }
 }
