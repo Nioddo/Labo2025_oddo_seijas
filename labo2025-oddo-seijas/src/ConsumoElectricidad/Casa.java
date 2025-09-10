@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Casa extends Vivienda{
     private int M2cubiertos;
     private int M2descubiertos;
-    static int calc=50;
+    private static int calc=50;
 
     public Casa(String direccion, int postal, Dueño duenio, HashMap<Integer, HashMap<Meses, Double>> KWhpAño, int m2cubiertos, int m2descubiertos) {
         super(direccion, postal, duenio, KWhpAño);

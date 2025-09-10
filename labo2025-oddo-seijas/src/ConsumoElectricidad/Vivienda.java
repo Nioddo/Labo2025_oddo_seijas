@@ -65,9 +65,12 @@ public abstract class Vivienda {
                 if(kw <= mesanterior*0.9){
                     double consumo =(kw*dameVlor())*0.95;
                     KWhpMes.put(mes,consumo);
+                    KWhpAño.put(año,KWhpMes);
                 }
                 else{
                     KWhpMes.put(mes,kw*dameVlor());
+                    KWhpAño.put(año,KWhpMes);
+
                 }
 
             }

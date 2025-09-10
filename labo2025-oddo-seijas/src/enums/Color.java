@@ -5,6 +5,7 @@ public enum Color {
 
     private String codigo;
 
+
     Color(String codigo) {
         this.codigo = codigo;
     }

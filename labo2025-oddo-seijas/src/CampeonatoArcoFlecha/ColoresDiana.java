@@ -1,5 +1,5 @@
 package CampeonatoArcoFlecha;
 
 public enum ColoresDiana {
-    ROJO,VERDE,AMARILLO,BLANCO
+    ROJO,VERDE,AMARILLO,BLANCO,NEGRO
 }
