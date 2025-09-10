@@ -1,67 +1,56 @@
 package ejersCurso;
 
-import java.util.ArrayList;
-
 public class Customer {
     private String name;
     private String size;
-    private ArrayList <Clothing> items = new ArrayList<>();
+    private Clothing[] items;
 
-    public Customer(String name, String size) {
+    public Customer(String name, int measurement) {
         this.name = name;
-        this.size = size;
+        this.size = setSize(measurement);
     }
 
+    public void addItems(Clothing[] newItem){
+        items = newItem;
+    }
+    public Clothing[] getItems() {
+        return items;
+    }
+    public void getTotalClothingCost(Clothing[] stock, double TAX){
+        double total = 0;
+        for (Clothing clothe: stock){
+            System.out.println("Item: " + clothe.getDescription() + " , " + clothe.getSize() + " , " + clothe.getPrice());
+            total += clothe.getPrice();
+        }
+        System.out.println("Costo total: " + (total + (total*TAX)));
+    }
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getSize() {
         return size;
     }
-
     public void setSize(String size) {
         this.size = size;
     }
-
-    public void setSize(int measurement){
-        switch (measurement){
-            case 1,2,3 :
-                setSize("S");
+    public String setSize(int measurement){
+        switch (measurement) {
+            case 1: case 2: case 3:
+                size = "S";
                 break;
-            case 4,5,6 :
-                setSize("M");
+            case 4: case 5: case 6:
+                size = "M";
                 break;
-            case 7,8,9 :
-                setSize("L");
+            case 7: case 8: case 9:
+                size = "L";
                 break;
             default:
-                setSize("X");
+                size = "X";
                 break;
         }
-    }
-
-    public void addItems(ArrayList <Clothing> cositas){
-        this.items = cositas;
-    }
-
-    public ArrayList <Clothing> returnArray(){
-        return items;
-    }
-
-    public double getTotalClothingCost(){
-        double total = 0;
-        for (Clothing ropa : items){
-            if (size.equals(ropa.getSize())){
-                total += ropa.getPrice();
-                System.out.println(ropa.getDescription() + ", " + ropa.getSize() + ", " + ropa.getPrice());
-            }
-            if (total > 15.0){break;}
-        }
-        return total;
+        return size;
     }
 }
