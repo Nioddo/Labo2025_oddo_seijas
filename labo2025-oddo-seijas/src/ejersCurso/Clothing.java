@@ -44,7 +44,6 @@ public class Clothing implements Comparable<Clothing>{
     public void setSize(String size) {
         this.size = size;
     }
-    // Practica 8.2
     @Override
     public int compareTo(Clothing c) {
         return this.description.compareTo(c.getDescription());

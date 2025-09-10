@@ -33,10 +33,10 @@ public class ShopApp {
 
         int average = 0;
         int count = 0;
-        for (Clothing item : c1.getItems()) {
-            if (item.getSize().equals("L")) {
+        for (Clothing prenda : c1.getItems()) {
+            if (prenda.getSize().equals("L")) {
                 count++;
-                average += item.getPrice();
+                average += prenda.getPrice();
             }
         }
 
@@ -44,7 +44,7 @@ public class ShopApp {
             average = (count == 0) ? 0 : average / count;
             System.out.println("Average price = " + average + ", Count = " + count);
         } catch (ArithmeticException e) {
-            System.out.println("Don't divide by 0");
+            System.out.println("No se puede dividir por cero.");
         }
         Arrays.sort(c1.getItems());
         for (Clothing prenda : c1.getItems()){
