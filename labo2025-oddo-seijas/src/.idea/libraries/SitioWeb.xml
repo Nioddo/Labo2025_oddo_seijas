@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="SitioWeb">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/SitioWeb.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
