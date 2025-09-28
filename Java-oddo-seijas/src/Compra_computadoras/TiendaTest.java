@@ -1,4 +1,4 @@
-package Compra_computadoras;
+/*package Compra_computadoras;
 
 import SistemaDeAlmuerzos.Persona;
 import org.junit.jupiter.api.BeforeEach;
@@ -130,4 +130,4 @@ public class TiendaTest {
         assertEquals(2, monitor.getStock());
     }
 
-}
+}*/

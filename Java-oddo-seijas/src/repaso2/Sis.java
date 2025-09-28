@@ -77,7 +77,6 @@ public void depelospers(Ticket Te){
 public static void main(String[] args) {
             Desarollador d1 = new Desarollador("franco","marotta",17, LocalDate.of(2021,3,3));
         Clients c1 = new Clients("juampi","baquro",16,0);
-    Ticket t1 = new THardware(c1,"placa rota",null,null,new ArrayList<String>(),EstadoT.ABIERTO,);
 
 
 }

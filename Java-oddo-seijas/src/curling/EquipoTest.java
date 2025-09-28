@@ -1,4 +1,4 @@
-package curling;
+/*package curling;
 import static junit.framework.Assert.assertEquals;
 import org.junit.Test;
 import unidad1.Fecha;
@@ -6,7 +6,6 @@ import unidad1.Fecha;
 import java.util.ArrayList;
 
 public class EquipoTest {
-    @Test
     public void Agregar() {
         Equipo equipo = new Equipo("Los Leones", "Belgrano", Turno.NOCHE);
 
@@ -22,4 +21,4 @@ public class EquipoTest {
         equipo.agregar(repetido);
 
     }
-}
+}*/

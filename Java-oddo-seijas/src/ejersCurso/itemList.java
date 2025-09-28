@@ -1,10 +1,9 @@
-package ejersCurso;
+/*package ejersCurso;
 
 import io.helidon.common.http.Http;
 import io.helidon.webserver.Handler;
 import io.helidon.webserver.ServerRequest;
 import io.helidon.webserver.ServerResponse;
-
 
 public class ItemList implements Handler{
     private Clothing[] stock;
@@ -21,4 +20,4 @@ public class ItemList implements Handler{
         }
         serverResponse.send(result);
     }
-}
+}*/
