@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcf3c284-77c2-4f6a-be9b-8fd4f1f8f8e6" name="Changes" comment="" />
+    <list default="true" id="fcf3c284-77c2-4f6a-be9b-8fd4f1f8f8e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Labo2025_oddo_seijas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,10 +37,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/oddo-seijas/Escritorio/Labo2025_oddo_seijas/Java-oddo-seijas",
-    "onboarding.tips.debug.path": "/home/oddo-seijas/Escritorio/Labo2025_oddo_seijas/Java-oddo-seijas/src/MasterChef/src/Main.java"
+    "last_opened_file_path": "/home/Alumno26.ODDO.Nicolas@ipm.edu.ar/Escritorio/Labo2025_oddo_seijas/Java-oddo-seijas",
+    "onboarding.tips.debug.path": "/home/oddo-seijas/Escritorio/Labo2025_oddo_seijas/Java-oddo-seijas/src/MasterChef/src/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
